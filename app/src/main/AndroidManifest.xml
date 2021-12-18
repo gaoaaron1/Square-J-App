@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.sqj.cpsc">
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -8,10 +9,19 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/logolauncher"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        android:requestLegacyExternalStorage="true"
+        android:configChanges="orientation"
+        android:screenOrientation="portrait"
+        >
         <activity android:name="com.sqj.cpsc.AllCategory"></activity>
+        <activity android:name="com.sqj.cpsc.RegisterActivity"></activity>
         <activity android:name="com.sqj.cpsc.CustomerActivity"></activity>
-        <activity android:name="com.sqj.cpsc.loginActivity" />
+        <activity android:name="com.sqj.cpsc.StaffActivity"></activity>
+        <activity android:name="com.sqj.cpsc.loginActivity2"></activity>
+        <activity android:name="com.sqj.cpsc.loginActivity"
+        />
 
         <activity android:name="com.sqj.cpsc.MainActivity"
             android:configChanges="orientation"

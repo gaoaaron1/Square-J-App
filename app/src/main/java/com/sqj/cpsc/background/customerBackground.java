@@ -1,9 +1,11 @@
-package com.sqj.cpsc;
+package com.sqj.cpsc.background;
 
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
+
+import com.sqj.cpsc.CustomerActivity;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -18,12 +20,15 @@ import java.net.URL;
 import java.net.URLEncoder;
 
 
-public class background extends AsyncTask <String, Void,String> {
+public class customerBackground extends AsyncTask <String, Void,String> {
+
 
     AlertDialog dialog;
     Context context;
     public Boolean login = false;
-    public background(Context context)
+
+
+    public customerBackground(Context context)
     {
         this.context = context;
     }
@@ -40,8 +45,10 @@ public class background extends AsyncTask <String, Void,String> {
         if(s.contains("login successful"))
         {
             Intent intent_name = new Intent();
-            intent_name.setClass(context.getApplicationContext(),CustomerActivity.class);
+            intent_name.setClass(context.getApplicationContext(), CustomerActivity.class);
+
             context.startActivity(intent_name);
+
         }
     }
     @Override
@@ -50,7 +57,7 @@ public class background extends AsyncTask <String, Void,String> {
         String user = voids[0];
         String pass = voids[1];
 
-        String connstr = "http://127.0.0.1:7882/login.php";
+        String connstr = "http://192.168.1.133:8000/login.php";
 
         try {
             URL url = new URL(connstr);
