@@ -60,7 +60,8 @@ public class RegisterActivity extends AppCompatActivity {
 
     public void submit(View view)
     {
-        String url="http://192.168.1.133:8000/myfile2.php";
+        String url="http://localhost:8000/api/myfile2.php";
+        //String url="http://192.168.1.133:8000/api/account";
         RequestQueue myrequest = Volley.newRequestQueue(this);
         StringRequest stringRequest=new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
             @Override

@@ -58,7 +58,7 @@ public class staffBackground extends AsyncTask <String, Void,String> {
         String user = voids[0];
         String pass = voids[1];
 
-        String connstr = "http://192.168.1.133:8000/login.php";
+        String connstr = "http://localhost:8000/api/login.php";
 
         try {
             URL url = new URL(connstr);

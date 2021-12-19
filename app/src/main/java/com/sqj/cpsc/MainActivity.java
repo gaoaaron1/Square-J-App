@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
 //--------------------------- REQUEST FOR REST API ------------------------------//
 
-        String URL="http://192.168.1.133:8000/api/employee/123456";
+        String URL = "http://localhost:8000/api/account";
 
         RequestQueue requestQueue = Volley.newRequestQueue(this);
 
